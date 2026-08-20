@@ -1,0 +1,283 @@
+/*--------------------------------------------------------------============================================================
+[Widget Stylesheet]
+
+/*==============================
+[Table of contents]
+
+WIDGET STYLESHEET
+----------------------------------
+1. GROUP LIST
+2. DUAL HEADDING
+3. CSS TRANSFORM
+4. ICON BOX
+=============================================================--------------------------------------------------------------*/
+
+.form-style2 span.wpcf7-form-control-wrap {
+    flex: 1;
+    margin-right: 10px;
+}
+
+/*---------------------------------------------------
+GROUP LIST
+----------------------------------------------------*/
+.toddly-list-group-wrapper {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.toddly-list-group .toddly-list-group-wrapper.layout_1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.toddly-list-group .toddly-list-group-wrapper.layout_2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.toddly-list-group .toddly-list-group-wrapper .toddly-list-group-item,
+.toddly-list-group .toddly-list-group-wrapper .toddly-list-group-item a {
+    position: relative;
+    line-height: 1;
+    display: flex;
+}
+
+.toddly-list-group .toddly-list-group-wrapper .toddly-list-group-item.toddly-icon-center,
+.toddly-list-group .toddly-list-group-wrapper .toddly-list-group-item.toddly-icon-center a {
+    flex-direction: column;
+}
+
+.toddly-list-group .toddly-list-group-wrapper .toddly-list-group-item.toddly-icon-right .toddly-list-group-icon {
+    order: 2;
+}
+
+.toddly-list-group .toddly-list-group-wrapper .toddly-list-group-item .toddly-list-group-icon .toddly-list-group-icon-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.toddly-list-group .toddly-list-group-wrapper .toddly-list-group-item .toddly-list-group-icon .toddly-list-group-icon-image {
+    display: flex;
+}
+
+.toddly-list-group .toddly-list-group-wrapper.layout_1 .toddly-list-group-item:after {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    content: "";
+    left: 0;
+}
+
+.toddly-list-group .toddly-list-group-wrapper .toddly-list-group-item .toddly-list-group-icon.yes {
+    transition: 0.4s;
+}
+
+.toddly-list-group .toddly-list-group-wrapper.layout_2 .toddly-list-group-item:after {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    content: "";
+    top: 0;
+}
+
+.toddly-list-group .toddly-list-group-wrapper .toddly-list-group-item .toddly-list-group-icon.yes {
+    position: relative;
+}
+
+.toddly-list-group .toddly-list-group-wrapper .toddly-list-group-item .toddly-list-group-icon.yes i,
+.toddly-list-group .toddly-list-group-wrapper .toddly-list-group-item .toddly-list-group-icon.yes .toddly-list-group-icon-image,
+.toddly-list-group .toddly-list-group-wrapper .toddly-list-group-item .toddly-list-group-icon.yes .toddly-list-group-icon-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toddly-list-group .toddly-list-group-wrapper .toddly-list-group-item .toddly-list-group-icon.yes .toddly-list-group-icon-number {
+    line-height: 0;
+}
+
+
+@media (max-width: 767px) {
+    .toddly-list-group .toddly-list-group-wrapper.layout_2 {
+        display: block;
+    }
+}
+
+span.toddly-list-group-text {
+    transition: 0.4s;
+}
+
+/*---------------------------------------------------
+DUAL HEADDING
+----------------------------------------------------*/
+.toddly-addons-dual-heading .toddly-addons-dual-heading-wrapper {
+    padding: 5px;
+}
+
+.toddly-addons-dual-heading .toddly-addons-dual-heading-wrapper .toddly-addons-dual-heading-description {
+    line-height: 26px;
+    margin: 30px 0 0 0;
+    padding: 10px;
+    font-weight: 400;
+}
+
+.toddly-addons-dual-heading .toddly-addons-dual-heading-wrapper .toddly-addons-dual-heading-icon {
+    display: inline-block;
+}
+
+.toddly-addons-dual-heading .toddly-addons-dual-heading-wrapper .toddly-addons-dual-heading-icon i {
+    font-size: 36px;
+}
+
+.toddly-addons-dual-heading .toddly-addons-dual-heading-wrapper .toddly-addons-dual-heading-title {
+    font-size: 36px;
+    margin-top: 10px;
+}
+
+.toddly-addons-dual-heading .toddly-addons-dual-heading-wrapper .toddly-addons-dual-heading-title {
+    font-size: 30px;
+    color: #132c47;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.toddly-addons-dual-heading .toddly-addons-dual-heading-wrapper .toddly-addons-dual-heading-title span {
+    color: #132c47;
+    display: initial;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1440px) {
+
+    .toddly-addons-dual-heading .toddly-addons-dual-heading-wrapper .toddly-addons-dual-heading-title .first-heading,
+    .toddly-addons-dual-heading .toddly-addons-dual-heading-wrapper .toddly-addons-dual-heading-title .second-heading {
+        padding: 0;
+    }
+}
+
+/*---------------------------------------------------
+CSS TRANSFORM
+----------------------------------------------------*/
+.toddly-css-transform-yes {
+    -webkit-transition-duration: var(--toddly-tfx-transition-duration, 0.2s);
+    transition-duration: var(--toddly-tfx-transition-duration, 0.2s);
+    -webkit-transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-transform: translate(var(--toddly-tfx-translate-x, 0), var(--toddly-tfx-translate-y, 0)) scale(var(--toddly-tfx-scale-x, 1), var(--toddly-tfx-scale-y, 1)) skew(var(--toddly-tfx-skew-x, 0), var(--toddly-tfx-skew-y, 0)) rotateX(var(--toddly-tfx-rotate-x, 0)) rotateY(var(--toddly-tfx-rotate-y, 0)) rotateZ(var(--toddly-tfx-rotate-z, 0));
+    transform: translate(var(--toddly-tfx-translate-x, 0), var(--toddly-tfx-translate-y, 0)) scale(var(--toddly-tfx-scale-x, 1), var(--toddly-tfx-scale-y, 1)) skew(var(--toddly-tfx-skew-x, 0), var(--toddly-tfx-skew-y, 0)) rotateX(var(--toddly-tfx-rotate-x, 0)) rotateY(var(--toddly-tfx-rotate-y, 0)) rotateZ(var(--toddly-tfx-rotate-z, 0));
+}
+
+.toddly-css-transform-yes:hover {
+    -webkit-transform: translate(var(--toddly-tfx-translate-x-hover, var(--toddly-tfx-translate-x, 0)), var(--toddly-tfx-translate-y-hover, var(--toddly-tfx-translate-y, 0))) scale(var(--toddly-tfx-scale-x-hover, var(--toddly-tfx-scale-x, 1)), var(--toddly-tfx-scale-y-hover, var(--toddly-tfx-scale-y, 1))) skew(var(--toddly-tfx-skew-x-hover, var(--toddly-tfx-skew-x, 0)), var(--toddly-tfx-skew-y-hover, var(--toddly-tfx-skew-y, 0))) rotateX(var(--toddly-tfx-rotate-x-hover, var(--toddly-tfx-rotate-x, 0))) rotateY(var(--toddly-tfx-rotate-y-hover, var(--toddly-tfx-rotate-y, 0))) rotateZ(var(--toddly-tfx-rotate-z-hover, var(--toddly-tfx-rotate-z, 0)));
+    transform: translate(var(--toddly-tfx-translate-x-hover, var(--toddly-tfx-translate-x, 0)), var(--toddly-tfx-translate-y-hover, var(--toddly-tfx-translate-y, 0))) scale(var(--toddly-tfx-scale-x-hover, var(--toddly-tfx-scale-x, 1)), var(--toddly-tfx-scale-y-hover, var(--toddly-tfx-scale-y, 1))) skew(var(--toddly-tfx-skew-x-hover, var(--toddly-tfx-skew-x, 0)), var(--toddly-tfx-skew-y-hover, var(--toddly-tfx-skew-y, 0))) rotateX(var(--toddly-tfx-rotate-x-hover, var(--toddly-tfx-rotate-x, 0))) rotateY(var(--toddly-tfx-rotate-y-hover, var(--toddly-tfx-rotate-y, 0))) rotateZ(var(--toddly-tfx-rotate-z-hover, var(--toddly-tfx-rotate-z, 0)));
+}
+
+/*---------------------------------------------------
+ICON BOX
+----------------------------------------------------*/
+.toddly-feature-box-item {
+    transition: .4s;
+}
+
+.toddly-feature-box-item .icon-background-yes .toddly-feature-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    text-align: center;
+    line-height: 70px;
+    font-size: 30px;
+    background-color: var(--accent-color);
+    border-radius: 0px;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+}
+
+.toddly-feature-box-item .icon-background-yes .toddly-feature-icon svg {
+    width: 35px;
+}
+
+span.toddly-feature-icon.icon-type-image img {
+    object-fit: cover;
+}
+
+.toddly-feature-icon-wrap {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toddly-feature-title {
+    margin-bottom: 18px;
+    font-size: 20px;
+}
+
+.toddly-feature-content p {
+    margin-bottom: 0;
+}
+
+.toddly-feature-box-item.toddly-icon-position-left {
+    display: inline-flex;
+    text-align: left;
+}
+
+.toddly-feature-box-item.toddly-icon-position-right {
+    display: flex;
+    text-align: right;
+    flex-direction: row-reverse;
+}
+
+.toddly-feature-box-item.toddly-feature-icon-center {
+    text-align: center;
+}
+
+.toddly-feature-box-item.toddly-feature-icon-left {
+    text-align: left;
+}
+
+.toddly-feature-box-item.toddly-feature-icon-left .toddly-feature-icon-wrap {
+    justify-content: flex-start;
+}
+
+.toddly-feature-box-item.toddly-feature-icon-right .toddly-feature-icon-wrap {
+    justify-content: flex-end;
+}
+
+.toddly-feature-box-item.toddly-feature-icon-right {
+    text-align: right;
+}
+
+.toddly-feature-icon-wrap i,
+.toddly-feature-icon-wrap svg,
+.toddly-feature-icon {
+    transition: .3s ease-in-out;
+    ;
+}
+
+.toddly-feature-box-item .icon-background-no .toddly-feature-icon svg {
+    MAX-HEIGHT: 118PX;
+}
+
+.toddly-feature-box-item .toddly-feature-icon i {
+    font-size: 25px;
+}
+
+.toddly-feature-box-number {
+    font-size: 22px;
+    letter-spacing: -0.73px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.toddly-feature-box-number span {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, .16);
+}
